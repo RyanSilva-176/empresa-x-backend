@@ -1,0 +1,274 @@
+.Titulo{
+
+background-color: red;
+
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --green: #27ae60;
+  --white: #e6e6e6;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #121214;
+}
+
+section {
+  padding: 0.5rem 2%;
+}
+
+header .container {
+  padding: 2rem 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  color: var(--white);
+}
+
+.logo {
+  height: 35px;
+}
+
+.search-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  gap: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #023190;
+  box-shadow: 0 0.5rem 1.5rem rgba(255, 255, 255, 0.1);
+}
+
+.search-div i {
+  font-size: 16px;
+  margin-left: 0.5rem;
+  color: var(--white);
+}
+
+.search-div input {
+  border: none;
+  background: none;
+  height: 34px;
+  width: 100%;
+  outline: none;
+  color: var(--white);
+}
+
+.adm-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 200px;
+}
+
+.adm-info .username {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.adm-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.adm-info a {
+  background: #ae3e27;
+  color: var(--white);
+  font-size: 16px;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.adm-info a:hover {
+  background: var(--white);
+  color: #121214;
+}
+
+.userImage {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.employees {
+  margin-top: 5rem;
+}
+
+.employees .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu a {
+  cursor: pointer;
+  background: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  background: var(--white);
+  color: #121214;
+}
+
+.sub-heading {
+  text-align: center;
+  color: var(--green);
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.heading {
+  text-align: center;
+  color: var(--white);
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.box {
+  padding: 2.5rem;
+  background: #202024;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.box .fa-pencil,
+.box .fa-trash {
+  position: absolute;
+  top: 1.5rem;
+  background: var(--white);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #202024;
+}
+
+.box .fa-pencil:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.box .fa-trash:hover {
+  background: #ae3e27;
+  color: var(--white);
+}
+
+.box .fa-pencil {
+  right: -15rem;
+}
+.box .fa-trash {
+  left: -15rem;
+}
+
+.box:hover .fa-pencil {
+  right: 1.5rem;
+}
+.box:hover .fa-trash {
+  left: 1.5rem;
+}
+
+.box img {
+  height: 17rem;
+  margin: 1rem 0;
+  border-radius: 50%;
+}
+
+.box .employee-name {
+  color: var(--white);
+  font-size: 2.5rem;
+}
+
+.box .employee-email {
+  color: var(--green);
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.box .employee-department {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.box .employee-schedule,
+.box .employee-work {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+  .search-div {
+    display: none;
+  }
+  .logo-div {
+    width: auto;
+  }
+  .adm-info {
+    width: auto;
+  }
+
+  .box img {
+    height: 24rem;
+    margin: 1rem 0;
+  }
+}
