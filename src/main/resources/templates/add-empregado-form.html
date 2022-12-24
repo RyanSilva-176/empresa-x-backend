@@ -1,29 +1,72 @@
 <html xmlns:th="http://www.thymeleaf.org">
-
-	<head> 
-		<title>Adicionar Empregados</title>
-		<link rel="stylesheet" 
-		href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-		crossorigin="anonymous">
-	</head>
-	<body>
-		<div class="container">
+<head>
+	<title>Adicionar Empregado</title>
+	<link rel="stylesheet" type="text/css"  href="/css/add-employee.css">
+</head>
+<body>
+<div class="container">
+	<header>
+		<img class="logo" src="../images/Logo.png" alt="" />
+		<div>
 			<h2>Adicionar Empregado</h2>
-			<hr/>
-			 
-			<form action="#" th:action="@{salvarEmpregado}" th:object="${empregado}" method="POST">
-				<input type="text" id="nome" name="nome" th:value="*{nome}" th:field="*{nome}" placeholder="Adicionar Nome" class="form-control col-4 mb-4"/>
-				<input type="text" id="nome" name="nome" th:value="*{email}" th:field="*{email}" placeholder="Adicionar E-mail" class="form-control col-4 mb-4"/>
-				<input type="text" id="nome" name="nome" th:value="*{departamento}" th:field="*{departamento}" placeholder="Adicionar Departamento" class="form-control col-4 mb-4"/>
-				<input type="text" id="nome" name="nome" th:value="*{horario}" th:field="*{horario}" placeholder="Adicionar horário" class="form-control col-4 mb-4"/>
-				<input type="text" id="nome" name="nome" th:value="*{emExecucao}" th:field="*{emExecucao}" placeholder="Adicionar em Execução" class="form-control col-4 mb-4"/>
-				<button class="btn btn-dark" type="submit">Save</button>	
-				<input type="hidden" th:field="*{id}" />		
-			</form>
-			<hr/>
-			<a th:href="@{/list}">Voltar a Lista</a>
-			 
+			<p>Informe os dados abaixo</p>
 		</div>
-	</body>
+	</header>
+	<form action="#" th:action="@{salvarEmpregado}" th:object="${empregado}" method="POST">
+		<div class="nome-div">
+			<label for="nome">Nome do Empregado</label>
+			<input type="text" name="Nome" id="Nome" placeholder="Ryan Silva" th:value="*{nome}" th:field="*{nome}" />
+		</div>
+		<div class="email-div">
+			<label for="email">Endereço e-mail</label>
+			<input
+					type="text"
+					name="Endereço e-mail"
+					id="email"
+					placeholder="exemplo@gmail.com"
+					th:value="*{email}" th:field="*{email}"
+			/>
+		</div>
+		<div class="departamento-div">
+			<label for="departamento">Departamento</label>
+			<input
+					type="text"
+					name="Departamento"
+					id="Departamento"
+					placeholder="Desenveolvimento Web"
+					th:value="*{departamento}" th:field="*{departamento}"
+			/>
+		</div>
+		<div class="horario-div">
+			<label for="horario">Horário de trabalho</label>
+			<input
+					type="text"
+					name="horario"
+					id="horario"
+					placeholder="08:00 - 16:00"
+					th:value="*{horario}" th:field="*{horario}"
+			/>
+		</div>
+		<div class="trabalhando-div">
+			<label for="trabalhando">Trabalhando em</label>
+			<input
+					type="text"
+					name="trabalhando"
+					id="trabalhando"
+					placeholder="Homepage do projeto"
+					th:value="*{emExecucao}" th:field="*{emExecucao}"
+			/>
+		</div>
+		<input
+				type="submit"
+				name="submit"
+				id="submit"
+				value="Adicionar Empregado"
+		/>
+	</form>
+	<footer>
+		<a th:href="@{/list}">Voltar</a>
+	</footer>
+</div>
+</body>
 </html>
