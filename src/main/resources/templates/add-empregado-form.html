@@ -27,6 +27,16 @@
 					th:value="*{email}" th:field="*{email}"
 			/>
 		</div>
+		<div class="image-div">
+			<label for="image">Foto do empregado</label>
+			<input
+					type="text"
+					name="Link da imagem"
+					id="image"
+					placeholder="Link para a imagem"
+					th:value="*{image}" th:field="*{image}"
+			/>
+		</div>
 		<div class="departamento-div">
 			<label for="departamento">Departamento</label>
 			<input
@@ -63,6 +73,7 @@
 				id="submit"
 				value="Adicionar Empregado"
 		/>
+		<input type="hidden" th:field="*{id}" />
 	</form>
 	<footer>
 		<a th:href="@{/list}">Voltar</a>

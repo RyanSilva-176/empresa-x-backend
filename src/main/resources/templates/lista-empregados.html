@@ -48,7 +48,7 @@
 			<div th:each="empregado: ${empregados}" class="box">
 				<a th:href="@{mostrarEdicoesForm(empregadoId=${empregado.id})}" class="fa-solid fa-pencil"></a>
 				<a th:href="@{/apagarEmpregado(empregadoId=${empregado.id})}" class="fa-solid fa-trash"></a>
-				<img src="images/profile.jpg" alt="" />
+				<img th:src="${empregado.image}" alt="" />
 				<h3 th:text="${empregado.nome}" class="employee-name"></h3>
 				<h4 th:text="${empregado.email}" class="employee-email"></h4>
 				<p th:text="${empregado.departamento}" class="employee-department"></p>

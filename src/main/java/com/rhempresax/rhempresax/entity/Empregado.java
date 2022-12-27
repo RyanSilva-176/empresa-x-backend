@@ -15,7 +15,9 @@ public class Empregado {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
+	private String image;
+
 	private  String nome;
 	
 	private String email;
@@ -25,6 +27,14 @@ public class Empregado {
 	private String horario;
 	
 	private String emExecucao;
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
 
 	public String getEmExecucao() {
 		return emExecucao;
