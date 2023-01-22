@@ -19,7 +19,7 @@ public class EmpregadoController {
 	@Autowired
 	private IEmpregadoRepository eRepo;
 	
-	@GetMapping({"/mostrarEmpregados", "/", "/list"})
+	@GetMapping({"/mostrarEmpregados", "/list"})
 	public ModelAndView mostrarEmpregados() {
 		ModelAndView mav = new ModelAndView("lista-empregados");
 		List<Empregado> list =  eRepo.findAll();
@@ -54,4 +54,17 @@ public class EmpregadoController {
 		eRepo.deleteById(empregadoId);
 		return "redirect:/list";
 	}
+
+	@GetMapping({"/login", "/"})
+	public ModelAndView login() {
+		ModelAndView mav = new ModelAndView("login");
+		return mav;
+	}
+
+	@GetMapping("/cadastro")
+	public ModelAndView cadastro() {
+		ModelAndView mav = new ModelAndView("cadastro");
+		return mav;
+	}
+
 }
